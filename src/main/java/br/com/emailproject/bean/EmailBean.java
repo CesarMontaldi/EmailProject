@@ -15,6 +15,10 @@ public class EmailBean implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
+	private static final String DESTINATARIO = "guto_montaldi@yahoo.com.br";
+	
+	private static final String ASSUNTO = "Mudança de senha";
+	
 	@Inject
 	private EmailService emailService;
 	
@@ -29,6 +33,6 @@ public class EmailBean implements Serializable{
 		
 		EmailLayout layout = new EmailLayout();
 		
-		return layout.montarEmailAdimnistrador("guto_montaldi@yahoo.com.br", "Mudança de senha");
+		return layout.montarEmailAdimnistrador(DESTINATARIO, ASSUNTO);
 	}
 }
